@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    font-family: "Seymour One", sans-serif;
+    color: rgb(44, 41, 44);
+    background-color: rgb(247, 239, 247);
+}
+
+#main-header {
+    background-color: rgb(140, 0, 255);
+    color: white;
+    text-align: center;
+    padding: 3rem 5%;
+}
+
+#main-header h1 {
+    padding: 0.5rem;
+    font-size: 3rem;
+    text-shadow: 2px 4px 8px rgb(37, 37, 37);
+}
+
+#takeinput {
+    padding: 2rem;
+    text-align: center;
+    justify-content: center;
+}
+
+#inputlabel {
+    margin: 0px;
+    padding: 2rem;
+    font-size: 2rem;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#inputfield {
+    padding: 0.2rem;
+    border-radius: 10px;
+    border: 2px solid rgb(208, 208, 208);
+    width: 40%; 
+}
+
+#searchbutton {
+    margin: 0.7rem;
+    padding: 0.2rem;
+    border-radius: 10px;    
+    border: 2px solid rgb(140, 0, 255);
+    background-color: rgb(140, 0, 255);
+    color: white;
+}
+
+#searchbutton:hover {
+    background-color: rgb(57, 0, 103);
+    border-color: rgb(57, 0, 103);
+    cursor: pointer;
+}
