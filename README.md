@@ -190,18 +190,18 @@ See the [open issues](https://github.com/othneildrew/Best-README-Template/issues
 
 ## How to make a Pull Request?
 
-**1.** Start by forking the [**Driver-Snoozing-System**](https://github.com/AnishDubey27/Weather_Detector) repository. Click on the <a href="https://github.com/AnishDubey27/Weather_Detector/fork"><img src="https://i.imgur.com/G4z1kEe.png" height="21" width="21"></a> symbol at the top right corner.
+**1.** Start by forking the [**Weather_Detector**](https://github.com/AnishDubey27/Weather_Detector) repository. Click on the <a href="https://github.com/AnishDubey27/Weather_Detector/fork"><img src="https://i.imgur.com/G4z1kEe.png" height="21" width="21"></a> symbol at the top right corner.
 
 **2.** Clone your forked repository:
 
 ```bash
-git clone https://github.com/<your-github-username>/Driver-Snoozing-System.git
+git clone https://github.com/<your-github-username>/Weather_Detector.git
 ```
 
 **3.** Navigate to the new project directory:
 
 ```bash
-cd Driver-Snoozing-System
+cd Weather_Detector
 ```
 
 **4.** Set upstream command:
