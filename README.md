@@ -31,7 +31,8 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a ![](https://github.com/AnishDubey27/Weather_Detector/blob/main/media/weather.gif)>
+  <a ![](https://github.com/AnishDubey27/Weather_Detector/blob/main/media/weather.gif)
+     alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Best-README-Template</h3>
