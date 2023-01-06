@@ -31,7 +31,8 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a ![](https://github.com/AnishDubey27/Weather_Detector/blob/main/media/weather.gif)
+  <img src="https://github.com/AnishDubey27/Weather_Detector/blob/main/media/weather.gif" border="0"></
+  </p>
      alt="Logo" width="80" height="80">
   </a>
 
