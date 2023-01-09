@@ -72,7 +72,7 @@ I recently added a dockerfile to the project to increase the scalability of the 
 Use the `README.md` to get started.
 
 
-<p style="text-align: right;">[Back to top](#top)</p>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
   
