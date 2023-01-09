@@ -72,7 +72,8 @@ I recently added a dockerfile to the project to increase the scalability of the 
 Use the `README.md` to get started.
 
 
- <p align="right">[Back to top](#top)</p>
+<p style="text-align: right;">[Back to top](#top)</p>
+
 
   
 
