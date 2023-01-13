@@ -64,8 +64,6 @@
 
 This is a weather app as it name suggests. I started this project in order to test my command over python and overcome the challenges which come along the way while building this project from scratch.
 
-This application 
-
 I recently added a dockerfile to the project to increase the scalability of the application and will be using other DevOps based tools in the future.
 
 Use the `README.md` to get started.
