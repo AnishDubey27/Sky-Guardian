@@ -56,8 +56,6 @@
   </ol>
 </details>
 
-
-
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
@@ -70,10 +68,6 @@ Use the `README.md` to get started.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-  
-
 ### Built With
 
 
