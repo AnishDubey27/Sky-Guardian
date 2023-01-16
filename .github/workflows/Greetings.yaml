@@ -12,6 +12,6 @@ jobs:
         sudo apt-get install jq -y
     - name: Get issue information
       id: get_issue
-      run: echo "::set-output name=issue_creator::$(cat $GITHUB_EVENT_PATH | jq '.issue.user.login')"
+      run: echo "::set-output name=issue_creator::$(jq '.issue.user.login' ${{toJson(github.event)}})"
     - name: Display message
       run: echo "Hello ${{steps.get_issue.outputs.issue_creator}} Thank you for generating an issue to this project! Please wait while we get back to you."
