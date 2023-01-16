@@ -6,6 +6,10 @@ jobs:
   display_message:
     runs-on: ubuntu-latest
     steps:
+    - name: Install jq
+      run: |
+        sudo apt-get update
+        sudo apt-get install jq -y
     - name: Get issue information
       id: get_issue
       run: echo "::set-output name=issue_creator::$(jq '.issue.user.login' ${{toJson(github.event)}})"
