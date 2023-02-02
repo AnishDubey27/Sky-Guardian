@@ -132,6 +132,19 @@ Follow the steps below to install the application
    python manage.py runserver
    ```
 
+Alternatively, using docker:
+1. Clone the repo
+   ```sh
+   git clone https://github.com/AnishDubey27/Sky-Guardian.git
+   ```
+2. Go inside the newly created directory
+   ```sh
+   cd Sky-Guardian
+   ```
+3. Run the project
+   ```sh
+   docker-compose up
+   ```
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
