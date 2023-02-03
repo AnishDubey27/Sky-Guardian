@@ -13,9 +13,7 @@
   <img src="https://github.com/AnishDubey27/Sky-Guardian/blob/main/media/weather.gif" border="0"></
   </p>
      
-
-  <h1 align="center">Sky-Guardian</h1>
-
+<h1 align="center">Sky-Guardian</h1>
   <p align="center">
     An awesome Weather detection tool!
     <br />
