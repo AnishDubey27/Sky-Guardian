@@ -18,7 +18,7 @@
   <style>
     body {
     margin: 0;
-    font-family: "Seymour One", sans-serif;
+    font-family: 'poppins', cursive;
     color: rgb(255, 255, 255);
     background-color: rgb(0, 0, 0);
 }
@@ -46,40 +46,51 @@
     margin: 0px;
     padding: 2rem;
     font-size: 2rem;
-    /* font-family: 'Open Sans', sans-serif; */
+    /*font-family: 'Open Sans', sans-serif; */
 }
 
 #inputfield {
     padding: 0.2rem;
     border-radius: 10px;
     border: 2px solid rgb(208, 208, 208);
-    width: 40%; 
+    width: 40%;
+    color : rgb(0, 0, 0);
+    z-index: 2;
 }
 
 #searchbutton {
-    margin: 0.7rem;
     padding: 0.2rem;
-    border-radius: 10px;    
-    border: 2px solid rgb(140, 0, 255);
-    background-color: rgb(140, 0, 255);
-    color: white;
+    animation: pulse 3s infinite;
+    background-color: rgb(0, 0, 0);
+    border: 2px solid rgb(208, 208, 208);
+    border-radius: 200px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    width : 30%;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 #searchbutton:hover {
-    background-color: rgb(57, 0, 103);
-    border-color: rgb(57, 0, 103);
+    background-color: rgb(11, 95, 35);
+    border-color: rgb(0, 0, 0);
     cursor: pointer;
 }
 #bodyofcountry {
-  border: 2px solid rgb(208, 208, 208);
-  background-color: rgb(140, 0, 255);
-  box-shadow: 2px 4px 8px grey;
-  color: white;
-  width: 50%;
-  border-radius: 10px;
-  margin: auto;
-  margin: 4rem auto;
-  padding: 1rem 0;
+    padding: 2rem;
+    text-align: center;
+    justify-content: center;
 }
   </style>
 </head>
@@ -87,36 +98,35 @@
 <body>
   <header id="main-header">
     <h1>Sky-Guardian</h1>
-<<<<<<< HEAD
-    <p>The Ultimate Weather Companion</p>
-=======
     <p>Your Ultimate Weather Companion</p>
->>>>>>> ae59e2ada3f8e6a7251b7a8e7d9d7a7bfed20b53
   </header>
   <main>
     <section id="takeinput">
-        <!-- <label for="search" id="inputlabel">Enter your city name</label> -->
         <h2 id="inputlabel">Enter your city's name</h2>
         <section id="search">
             <form action="" method="post">
                 <p>{% csrf_token %}</p>
                 <input type="text" name="city" id="inputfield" placeholder="e.g : California">
                 <button id="searchbutton">Search</button>
+                <br>
+                {% if error %}
+                <p><strong>{{error}}</strong></p>
+                {% endif %}
             </form>
         </section>
         <section>
             <div class="row" id="bodyofcountry">
                 {% if data.country_code %}
                 <div class="col-md-6 col-md-offset-3">
-                  <h1>{{city}}</h1>
-                  <h3>country code : {{data.country_code}}</h1>
+                    <h1>{{data.decoded_city}}</h1>
+                    <h3>country code : {{data.country_code}}</h3>
                     <h5>coordinate : {{data.coordinate}}</h5>
                     <h5>temp : {{data.temp}}</h5>
                     <h5>pressure : {{data.pressure}} </h5>
                     <h5>humidity : {{data.humidity}}</h5>
                 </div>
                 {% endif %}
-              </div>
+            </div>            
         </section>
     </section>
 </main>
