@@ -23,7 +23,8 @@ def index(request):
             'decoded_city': decoded_city,
             'country_code': str(json_data['sys']['country']),
             'coordinate': str(json_data['coord']['lon']) + ' ' + str(json_data['coord']['lat']),
-            'temp': str(json_data['main']['temp']) + 'K',
+            'temp': '{:.2f}°C'.format(json_data['main']['temp']-273.15),
+            'icon_code': json_data['weather'][0]['icon'] ,
             'pressure': str(json_data['main']['pressure']),
             'humidity': str(json_data['main']['humidity']),
         }
