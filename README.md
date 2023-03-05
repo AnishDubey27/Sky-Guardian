@@ -68,8 +68,8 @@ Use the `README.md` to get started.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-### Built With
 
+### Built with
 
 <p align="center">
   <a href="https://www.djangoproject.com/">
