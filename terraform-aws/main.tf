@@ -1,7 +1,7 @@
 provider "aws" {
   region = "us-east-1"
-  access_key = "AKIAVNXG64A3WHQX5FO4"
-  secret_key = "3NauiiriAR8A70jzpGaffkmRaO1m+uCgvApJjvvw"
+  access_key = "your aws access key"
+  secret_key = "your aws secret key"
 }
 
 resource "aws_security_group" "my_key" {
