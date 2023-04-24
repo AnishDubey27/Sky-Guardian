@@ -1,7 +1,7 @@
 provider "aws" {
   region = "us-east-1"
-  access_key = "AKIAVNXG64A3WHQX5FO4"
-  secret_key = "3NauiiriAR8A70jzpGaffkmRaO1m+uCgvApJjvvw"
+  access_key = "your aws access key"
+  secret_key = "your aws secret key"
 }
 
 resource "aws_security_group" "my_key" {
@@ -39,17 +39,6 @@ resource "aws_instance" "sky-guardian" {
       "echo 'Starting provisioning'",
       "sudo apt-get update",
       "echo 'Finished apt-get update'",
-      "sudo apt-get install -y openjdk-8-jdk",
-      "echo 'installed jdk'",
-      "wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -",
-      "echo 'deb https://pkg.jenkins.io/debian-stable binary/' | sudo tee -a /etc/apt/sources.list",
-      "sudo apt-get update",
-      "sudo apt-get install -y jenkins",
-      "echo 'installed Jenkins'",
-      "sudo systemctl start jenkins",
-      "echo 'started Jenkins'",
-      "sudo systemctl enable jenkins",
-      "echo 'enabled Jenkins'",
       "sudo apt-get install -y python3-pip",
       "echo 'Finished installing pip3'",
       "git clone https://github.com/AnishDubey27/Sky-Guardian.git",
