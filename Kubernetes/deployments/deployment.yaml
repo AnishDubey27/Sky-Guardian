@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+
+kind: Deployment
+
+metadata:
+
+  name: django-deployment
+
+  labels:
+
+    app: sky-guardian
+
+spec:
+
+  replicas: 3
+
+  selector:
+
+    matchLabels:
+
+      app: sky-guardian
+
+  template:
+
+    metadata:
+
+      labels:
+
+        app: sky-guardian
+
+    spec:
+
+      containers:
+
+      - name: sky-guardian
+
+        image: anish2703/sky-guardian:latest
+
+        ports:
+
+        - containerPort: 8000
