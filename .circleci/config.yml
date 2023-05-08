@@ -6,6 +6,7 @@ jobs:
       - image: cimg/python:3.11
     steps:
       - checkout
+      - run: pip install django
       - run: python manage.py runserver
   test:
     docker:
