@@ -6,6 +6,8 @@ jobs:
       - image: cimg/python:3.11
     steps:
       - checkout
+      - setup_remote_docker:
+          version: 20.10.8
       - run: pip install django
       - run: docker-compose build
   test:
@@ -13,8 +15,6 @@ jobs:
       - image: cimg/python:3.11
     steps:
       - checkout
-      - setup_remote_docker:
-          version: 20.10.8
       - run: python manage.py test
   deploy:
     docker:
