@@ -6,8 +6,13 @@ jobs:
       - image: cimg/python:3.11
     steps:
       - checkout
+<<<<<<< HEAD
       - run: pip install -r requirements.txt
       - run: python manage.py runserver
+=======
+      - run: pip install django
+      - run: docker-compose build
+>>>>>>> 70317e6046d369699f7334304ae9237ab0d80d72
   test:
     docker:
       - image: cimg/python:3.11
@@ -18,6 +23,7 @@ jobs:
     docker:
       - image: cimg/python:3.11
     steps:
+      - run: docker-compose up -d
       - run: echo "Deploying to production server"
 
 workflows:
