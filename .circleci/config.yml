@@ -4,8 +4,6 @@ jobs:
   build:
     docker:
       - image: cimg/python:3.11
-        privileges:
-          - docker
     steps:
       - checkout
       - setup_remote_docker
