@@ -4,8 +4,11 @@ jobs:
   build:
     docker:
       - image: cimg/python:3.11
+        privileges:
+          - docker
     steps:
       - checkout
+      - setup_remote_docker
       - run: sudo apt-get update && sudo apt-get install -y python3-pip
       - run: pip3 install django
       - run: docker-compose build
