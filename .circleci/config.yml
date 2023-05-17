@@ -1,28 +1,37 @@
 version: 2.1
 
+executors:
+  docker-executor:
+    docker:
+      - image: cimg/base:stable
+    environment:
+      DOCKER_HOST: tcp://localhost:2375
+
 jobs:
   build:
-    docker:
-      - image: cimg/python:3.11
+    executor: docker-executor
     steps:
+      - setup_remote_docker
       - checkout
       - run: pip install django
       - run: docker-compose build
+
   test:
-    docker:
-      - image: cimg/python:3.11
+    executor: docker-executor
     steps:
+      - setup_remote_docker
       - checkout
       - run: python manage.py test
+
   deploy:
-    docker:
-      - image: cimg/python:3.11
+    executor: docker-executor
     steps:
+      - setup_remote_docker
       - run: docker-compose up -d
       - run: echo "Deploying to production server"
 
 workflows:
-  build_and_test_deploy:
+  build_test_deploy:
     jobs:
       - build
       - test:
