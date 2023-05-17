@@ -1,7 +1,15 @@
 version: 2.1
-
+executors:
+  docker-executor:
+    docker:
+      - image: cimg/base:stable
+    environment:
+      DOCKER_HOST: tcp://localhost:2375
 jobs:
   build:
+    executor: docker-executor
+    steps:
+      - setup_remote_docker
     docker:
       - image: cimg/python:3.11
     steps:
