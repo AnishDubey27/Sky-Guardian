@@ -6,28 +6,33 @@ jobs:
       - image: cimg/python:3.11
     steps:
       - checkout
-<<<<<<< HEAD
-      - run: pip install -r requirements.txt
-      - run: python manage.py runserver
-=======
-      - run: pip install django
+      - setup_remote_docker
+      - run: sudo apt-get update && sudo apt-get install -y python3-pip
+      - run: pip3 install django
       - run: docker-compose build
->>>>>>> 70317e6046d369699f7334304ae9237ab0d80d72
+
   test:
     docker:
       - image: cimg/python:3.11
     steps:
       - checkout
+      - run: sudo apt-get update && sudo apt-get install -y python3-pip
+      - run: pip3 install django
+      - run: pip3 install requests
       - run: python manage.py test
+
   deploy:
     docker:
       - image: cimg/python:3.11
     steps:
+      - checkout
+      - setup_remote_docker
+      - run: ls -la
       - run: docker-compose up -d
       - run: echo "Deploying to production server"
 
 workflows:
-  build_and_test_deploy:
+  build_test_deploy:
     jobs:
       - build
       - test:
