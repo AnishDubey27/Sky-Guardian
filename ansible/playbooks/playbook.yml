@@ -1,0 +1,28 @@
+---
+- name: Configure target host
+  hosts: target_host
+  become: true
+  tasks:
+    - name: Update packages
+      apt:
+        update_cache: true
+
+    - name: Install Docker
+      apt:
+        name: docker.io
+        state: present
+
+    - name: Install Docker Compose
+      apt:
+        name: docker-compose
+        state: present
+
+    - name: Copy Docker Compose file
+      copy:
+        src: /path/to/docker-compose.yml
+        dest: /home/user/docker-compose.yml
+
+    - name: Start Docker containers
+      command: docker-compose up -d
+      args:
+        chdir: /home/user
